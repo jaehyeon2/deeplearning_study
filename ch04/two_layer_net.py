@@ -35,7 +35,7 @@ class TwoLayerNet:
         return accuracy
 
     def numerical_gradient(self, x, t):
-        loss_W = lambda x: self.loss(x, t)
+        loss_W = lambda W: self.loss(x, t)
 
         grads = {}
         grads['W1'] = numerical_gradient(loss_W, self.params['W1'])
@@ -44,15 +44,17 @@ class TwoLayerNet:
         grads['b2'] = numerical_gradient(loss_W, self.params['b2'])
 
         return grads
-#%%
-net = TwoLayerNet(input_size=784, hidden_size=100, output_size=10)
-print(net.params['W1'].shape)
-#%%
-print(net.params['b1'].shape)
-#%%
-print(net.params['W2'].shape)
-#%%
-print(net.params['b2'].shape)
-#%%
-x = np.random.randn(100, 784)
-y = net.predict(x)
+
+if __name__ == "__main__":
+
+    net = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
+    print(net.params['W1'].shape)
+
+    print(net.params['b1'].shape)
+
+    print(net.params['W2'].shape)
+
+    print(net.params['b2'].shape)
+
+    x = np.random.randn(100, 784)
+    y = net.predict(x)
