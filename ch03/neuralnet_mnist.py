@@ -1,6 +1,6 @@
 #%%
 import pickle
-import sys, os
+import os
 import numpy as np
 from dataset.mnist import load_mnist
 #%%
