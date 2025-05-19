@@ -13,9 +13,9 @@ t = [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
 # case1: if the answer is expected to be 2
 y1 = [0.1, 0.05, 0.6, 0.0, 0.05, 0.1, 0.0, 0.1, 0.0, 0.0]
 result1 = cross_entropy_error(np.array(y1), np.array(t))
-result1
+print(result1)
 #%%
 # case2: if the answer is expected to be 7
 y2 = [0.1, 0.05, 0.1, 0.0, 0.05, 0.1, 0.0, 0.6, 0.0, 0.0]
 result2 = cross_entropy_error(np.array(y2), np.array(t))
-result2
+print(result2)
