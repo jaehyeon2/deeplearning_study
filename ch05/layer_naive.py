@@ -9,9 +9,9 @@ class MulLayer:
         out = x * y
         return out
 
-    def backward(self, d_out):
-        dx = d_out * self.y
-        dy = d_out * self.x
+    def backward(self, dout):
+        dx = dout * self.y
+        dy = dout * self.x
 
         return dx, dy
 
@@ -26,7 +26,7 @@ class AddLayer:
         out = x + y
         return out
 
-    def backward(self, d_out):
-        dx = d_out * 1
-        dy = d_out * 1
+    def backward(self, dout):
+        dx = dout * 1
+        dy = dout * 1
         return dx, dy
