@@ -30,8 +30,10 @@ for i in range(iters_num):
     train_loss_list.append(loss)
 
     if i % iter_per_epoch == 0:
+
         train_acc = network.accuracy(x_train, t_train)
         test_acc = network.accuracy(x_test, t_test)
         train_acc_list.append(train_acc)
         test_acc_list.append(test_acc)
+
         print(train_acc, test_acc)
